@@ -95,7 +95,7 @@ Average check: (79 + 80 + 49 + 50 + 65) / 5 = 323 / 5 = 64.60.
 
 ## Task 5: Git history
 
-_Paste the output of `git log --oneline` here:_
+_Paste the output of ![git log --oneline](screenshots/git_log.png) here:_
 
 ```
 (example)
