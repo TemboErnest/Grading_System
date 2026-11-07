@@ -15,9 +15,7 @@ while True:
     print("4. Exit")
     option = input("Choose 1-4: ").strip()
 
-    # ---------- OPTION 1: ADD STUDENT ----------
-    if option == "1":
-        print("\n--- Add Student ---")
+    # ---------- OPTION 1: Aent ---")
 
         # Validate student number (must not be blank)
         student_number = input("Enter student number: ").strip()
@@ -25,7 +23,9 @@ while True:
             print("Error: student number cannot be blank.")
             student_number = input("Enter student number: ").strip()
 
-        # Validate name (must not be blank)
+        # Validate name (muDD STUDENT ----------
+    if option == "1":
+        print("\n--- Add Studst not be blank)
         name = input("Enter student name: ").strip()
         while name == "":
             print("Error: name cannot be blank.")
