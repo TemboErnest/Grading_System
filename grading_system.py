@@ -6,6 +6,52 @@
 
 students = []  # list of dictionaries, one dictionary per student
 
+
+def get_student_number():
+    while True:
+        student_number = input("Enter student number: ").strip()
+        if student_number != "":
+            return student_number
+        print("Error: student number cannot be blank.")
+
+
+def get_name():
+    while True:
+        name = input("Enter student name: ").strip()
+        if name != "":
+            return name
+        print("Error: name cannot be blank.")
+
+
+def get_mark():
+    while True:
+        mark_text = input("Enter mark (0-100): ").strip()
+        try:
+            mark = float(mark_text)
+        except ValueError:
+            print("Error: mark must be a number. Please try again.")
+            continue
+
+        if mark < 0 or mark > 100:
+            print("Error: mark must be between 0 and 100. Please try again.")
+            continue
+
+        return mark
+
+
+def determine_grade(mark):
+    if mark >= 80:
+        return "A", "Excellent"
+    elif mark >= 70:
+        return "B", "Very good"
+    elif mark >= 60:
+        return "C", "Good"
+    elif mark >= 50:
+        return "D", "Pass"
+    else:
+        return "F", "Fail"
+
+
 while True:
     # ---------- MENU ----------
     print("\n===== STUDENT GRADING SYSTEM =====")
@@ -15,55 +61,15 @@ while True:
     print("4. Exit")
     option = input("Choose 1-4: ").strip()
 
-    # ---------- OPTION 1: Aent ---")
-
-        # Validate student number (must not be blank)
-        student_number = input("Enter student number: ").strip()
-        while student_number == "":
-            print("Error: student number cannot be blank.")
-            student_number = input("Enter student number: ").strip()
-
-        # Validate name (muDD STUDENT ----------
+    # ---------- OPTION 1: ADD STUDENT ----------
     if option == "1":
-        print("\n--- Add Studst not be blank)
-        name = input("Enter student name: ").strip()
-        while name == "":
-            print("Error: name cannot be blank.")
-            name = input("Enter student name: ").strip()
+        print("\n--- Add Student ---")
 
-        # Validate mark (numeric and between 0 and 100) - re-prompt until valid
-        mark = None
-        while mark is None:
-            mark_text = input("Enter mark (0-100): ").strip()
-            try:
-                value = float(mark_text)
-            except ValueError:
-                print("Error: mark must be a number. Please try again.")
-                continue
+        student_number = get_student_number()
+        name = get_name()
+        mark = get_mark()
+        grade, decision = determine_grade(mark)
 
-            if value < 0 or value > 100:
-                print("Error: mark must be between 0 and 100. Please try again.")
-            else:
-                mark = value
-
-        # Work out grade and decision using if/elif/else
-        if mark >= 80:
-            grade = "A"
-            decision = "Excellent"
-        elif mark >= 70:
-            grade = "B"
-            decision = "Very good"
-        elif mark >= 60:
-            grade = "C"
-            decision = "Good"
-        elif mark >= 50:
-            grade = "D"
-            decision = "Pass"
-        else:
-            grade = "F"
-            decision = "Fail"
-
-        # Store the record as a dictionary inside the students list
         record = {
             "student_number": student_number,
             "name": name,
@@ -73,7 +79,6 @@ while True:
         }
         students.append(record)
 
-        # Clear feedback
         print("\nRecord added successfully!")
         print(f"{name} ({student_number}) scored {mark:.1f} -> Grade {grade} ({decision})")
 
@@ -116,7 +121,7 @@ while True:
                 else:
                     fails += 1
 
-            average = total_marks / total  # safe: total is at least 1 here
+            average = total_marks / total
 
             print(f"Total students : {total}")
             print(f"Class average  : {average:.2f}")
