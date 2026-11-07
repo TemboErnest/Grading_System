@@ -25,7 +25,7 @@
 |-------------|-------------|
 | **Input**   | Menu choice (1–4). For each new student: student number, name and mark. |
 | **Process** | Show the menu repeatedly in a `while` loop. Validate the student number and name (not blank) and the mark (numeric, 0–100), re-prompting until valid. Use `if/elif/else` to work out the grade and decision. Store the record as a dictionary and append it to the `students` list. Loop over `students` with `for` to display the report and to calculate total, average, highest, lowest, passes and fails. |
-| **Output**  | Confirmation after each record is added, a formatted report of all students, a class summary (total, average to 2 d.p., highest, lowest, passes, fails), and clear error or warning messages (invalid mark, empty class, invalid menu option). |
+| **Output**  | Confirmation after each record is added showing the student's name, number, mark, grade and decision; a formatted report of all students; a class summary (number of students, combined total of all marks, average to 2 d.p., highest, lowest, passes, fails); and clear error or warning messages (invalid mark, empty class, invalid menu option). |
 
 ### Why a list of dictionaries?
 
@@ -64,6 +64,7 @@ Class summary observed:
 
 ```
 Total students : 5
+Total marks    : 323.0
 Class average  : 64.60
 Highest mark   : 80.0
 Lowest mark    : 49.0

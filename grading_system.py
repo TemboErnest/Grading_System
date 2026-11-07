@@ -124,6 +124,7 @@ while True:
             average = total_marks / total
 
             print(f"Total students : {total}")
+            print(f"Total marks    : {total_marks:.1f}")
             print(f"Class average  : {average:.2f}")
             print(f"Highest mark   : {highest:.1f}")
             print(f"Lowest mark    : {lowest:.1f}")
