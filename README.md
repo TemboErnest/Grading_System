@@ -76,15 +76,15 @@ Average check: (79 + 80 + 49 + 50 + 65) / 5 = 323 / 5 = 64.60.
 ### Screenshots
 
 
-![T1 - Add 79 then 80](screenshots\T1.png)
+![T1 - Add 79 then 80](screenshots/T1.png)
 
-![T2 - Add 49 then 50](screenshots\T2.png)
+![T2 - Add 49 then 50](screenshots/T2.png)
 
-![T3 - Invalid marks rejected](screenshots\T3.png)
+![T3 - Invalid marks rejected](screenshots/T3.png)
 
-![T4 - Summary on empty class](screenshots\T4.png)
+![T4 - Summary on empty class](screenshots/T4.png)
 
-![T5 - Invalid menu option](screenshots\T5.png)
+![T5 - Invalid menu option](screenshots/T5.png)
 
 ![Full run with five students](screenshots/full_run.png)
 
@@ -95,7 +95,9 @@ Average check: (79 + 80 + 49 + 50 + 65) / 5 = 323 / 5 = 64.60.
 
 ## Task 5: Git history
 
-_Paste the output of ![git log --oneline](screenshots/git_log.png) here:_
+Git history screenshot:
+
+![Git history showing recent commits](screenshots/git_log.png)
 
 ```
 (example)
